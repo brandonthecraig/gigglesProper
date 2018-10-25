@@ -23,6 +23,7 @@ things to implement
 - controller (web directory)
 - javascript, html, JSON connective tissue to allow me to display stuff
 - static directory under resources for css, js and index (do all the front end at home lovely:)
+- css your table and make it look pretty
 
 
 round 2 stuff
@@ -31,6 +32,7 @@ round 2 stuff
 - add different user accounts?
 
 doing now top, already done underneath
-- homepage display our datatable
+- make a table composed from info from one object
+- created gig_display page and displayed a set table
 - making objects
 - hello world

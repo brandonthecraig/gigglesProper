@@ -1,0 +1,1 @@
+document.body.innerHTML = "<h1> This is the new table space </h1>"
