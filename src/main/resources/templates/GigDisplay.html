@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Giglist</title>
 </head>
 <body>
+    <h1>
+        Gig Details
+    </h1>
     <table>
         <tr>
             <th>Show Name</th>
@@ -20,8 +23,16 @@
 
 <!-- created table -->
     <div id="one_table">
-        <script src = "tableMaker.js">
-        </script>
+        <ttable>
+            <tr>
+                <th>Show Name</th>
+                <th>Contact Name</th>
+                <th>Quality</th>
+            </tr>
+            <tr>
+                <tth><a th:text='${gigTest.getName()}'></a> </tth>
+            </tr>
+        </ttable>
     </div>
 </body>
 </html>
