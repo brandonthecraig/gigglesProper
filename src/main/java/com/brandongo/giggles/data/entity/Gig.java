@@ -1,21 +1,20 @@
 package com.brandongo.giggles.data.entity;
 
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Gig {
-    // change this use entity mapping when you go to sql
-    // for now just make the app display data from object lists created on application page?
 
-
-
+    @SerializedName("showName:")
+    @Expose
     private String showName;
+    @SerializedName("contactName:")
+    @Expose
     private String contactName;
-    private int quality;
-
-    public Gig(String showName, String contactName, int quality) {
-        this.showName = showName;
-        this.contactName = contactName;
-        this.quality = quality;
-    }
+    @SerializedName("quality")
+    @Expose
+    private Integer quality;
 
     public String getShowName() {
         return showName;
@@ -33,11 +32,12 @@ public class Gig {
         this.contactName = contactName;
     }
 
-    public int getQuality() {
+    public Integer getQuality() {
         return quality;
     }
 
-    public void setQuality(int quality) {
+    public void setQuality(Integer quality) {
         this.quality = quality;
     }
+
 }

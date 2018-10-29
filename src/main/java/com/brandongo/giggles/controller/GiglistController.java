@@ -2,9 +2,13 @@ package com.brandongo.giggles.controller;
 
 
 import com.brandongo.giggles.data.entity.Gig;
+import com.brandongo.giggles.data.entity.GigList;
+import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.io.FileReader;
 
 @Controller
 public class GiglistController {
@@ -14,11 +18,28 @@ public class GiglistController {
     // HaltCampaign.html is model for this along with HaltController.java
     // need a servlet request? check video if doesn't work
     public String giglist(Model model) {
-        Gig gigTest = new Gig("XS Malarkey", "Ross", 5);
-        model.addAttribute("contactName", gigTest.getContactName());
-        model.addAttribute("showName", gigTest.getShowName());
-        model.addAttribute("quality", gigTest.getQuality());
-        return "GigDisplay";
+
+        Gson gson = new Gson();
+        try {
+
+            GigList gigList = gson.fromJson(new FileReader("/Users/craigb/BGLP/Giggles/gigglesProper/src/main/resources/gigData.json"), GigList.class);
+
+            model.addAttribute("showName", gigList.pullGig(0).getShowName());
+            model.addAttribute("contactName", gigList.pullGig(0).getContactName());
+            model.addAttribute("quality", gigList.pullGig(0).getQuality());
+            return "GigDisplay";
+
+
+        } catch (Exception e) {
+            System.out.println("screwed up didn't read");
+        }
+
+
+
+//        model.addAttribute("showName", "nothing happened");
+//        model.addAttribute("contactName", "Ross");
+//        model.addAttribute("quality", 5);
+          return "GigDisplay";
     }
 
 }
