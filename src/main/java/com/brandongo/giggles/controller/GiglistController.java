@@ -12,10 +12,14 @@ public class GiglistController {
     @RequestMapping("/gig_display")
     // added the model thing, use that to enter your list of objects. Allows you to access backend from frontend
     // HaltCampaign.html is model for this along with HaltController.java
-    public String giglist(Model model)
-    {
+    // need a servlet request? check video if doesn't work
+    public String giglist(Model model) {
         Gig gigTest = new Gig("XS Malarkey", "Ross", 5);
-        model.addAttribute(gigTest);
-        return "GigDisplay";}
+        model.addAttribute("contactName", gigTest.getContactName());
+        model.addAttribute("showName", gigTest.getShowName());
+        model.addAttribute("quality", gigTest.getQuality());
+        return "GigDisplay";
+    }
 
 }
+

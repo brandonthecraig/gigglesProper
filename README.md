@@ -7,6 +7,7 @@ what I want to learn
 -json stuff?
 -gitkraken practice
 -go from objects to html?
+-thymeleaf
 -all the werid spring boot annotations - override, controller, service, autowired, entity, table, column, id, repository
        requestmapping, 
 - how to display from a java object to a webpage, gonna need some html game and JS to tweak the HTML
@@ -15,13 +16,12 @@ what I want to learn
 
 things to implement
 - homepage it
-- display a table
 - display a set amount of data
 - make a form for new data to be entered on page (later, just java it for now)
 - add new data (java to begin)
 - entities and repositories of gigs  (data directory)
 - controller (web directory)
-- javascript, html, JSON connective tissue to allow me to display stuff
+- javascript, thymeleaf, html, JSON connective tissue to allow me to display stuff
 - static directory under resources for css, js and index (do all the front end at home lovely:)
 - css your table and make it look pretty
 
@@ -32,6 +32,7 @@ round 2 stuff
 - add different user accounts?
 
 doing now top, already done underneath
+- make a table composed from info from a repository of objects
 - make a table composed from info from one object
 - created gig_display page and displayed a set table
 - making objects

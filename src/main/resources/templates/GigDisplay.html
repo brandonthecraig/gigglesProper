@@ -5,34 +5,26 @@
     <title>Giglist</title>
 </head>
 <body>
-    <h1>
-        Gig Details
-    </h1>
-    <table>
-        <tr>
-            <th>Show Name</th>
-            <th>Contact Name</th>
-            <th>Quality</th>
-        </tr>
-        <tr>
-            <th>Shhhhhark</th>
-            <th>Evan Desmarais</th>
-            <th>5</th>
-        </tr>
-    </table>
+    <div id ="banner">
+        <h1>
+            Gig Details
+        </h1>
+    </div>
 
 <!-- created table -->
     <div id="one_table">
-        <ttable>
+        <table>
             <tr>
                 <th>Show Name</th>
                 <th>Contact Name</th>
                 <th>Quality</th>
             </tr>
             <tr>
-                <tth><a th:text='${gigTest.getName()}'></a> </tth>
+                <td th:text = "${showName}"> </td>
+                <td th:text = "${contactName}"> </td>
+                <td th:text = "${quality}"> </td>
             </tr>
-        </ttable>
+        </table>
     </div>
 </body>
 </html>
