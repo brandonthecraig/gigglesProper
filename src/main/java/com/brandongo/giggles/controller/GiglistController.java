@@ -34,11 +34,6 @@ public class GiglistController {
             System.out.println("screwed up didn't read");
         }
 
-
-
-//        model.addAttribute("showName", "nothing happened");
-//        model.addAttribute("contactName", "Ross");
-//        model.addAttribute("quality", 5);
           return "GigDisplay";
     }
 

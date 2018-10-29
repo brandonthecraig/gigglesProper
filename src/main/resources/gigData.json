@@ -5,6 +5,16 @@
         "showName:": "Trapdoor Comedy",
         "contactName:": "Tony Basnett",
         "quality": 5
+      },
+      {
+        "showName:": "XS Malarkey",
+        "contactName:": "Ross",
+        "quality": 5
+      },
+      {
+        "showName:": "Comedy Balloon",
+        "contactName:": "Jason Cooke",
+        "quality": 3
       }
     ]
   }

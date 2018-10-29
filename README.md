@@ -16,6 +16,7 @@ what I want to learn
 
 things to implement
 - homepage it
+- figure out what's going on with css and make it look all pretty
 - frame it as entities and repositories, so far it's just classes
 - display a set amount of data
 - make a form for new data to be entered on page (later, just java it for now)
