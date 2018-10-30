@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Giglist</title>
-    <link rel='stylesheet' href="../static/css/styles.css"/>
+    <link rel='stylesheet' type="text/css" th:href="@{/assets/css/style.css}"/>
 </head>
 <body>
     <div id ="banner">
@@ -20,11 +20,13 @@
                 <th>Contact Name</th>
                 <th>Quality</th>
             </tr>
-            <tr>
-                <td th:text = "${showName}"> </td>
-                <td th:text = "${contactName}"> </td>
-                <td th:text = "${quality}"> </td>
-            </tr>
+            <th:block th:each="gig: ${gigs}">
+                <tr>
+                    <td th:text = "${gig.getShowName()}"></td>
+                    <td th:text = "${gig.getContactName()}"></td>
+                    <td th:text = "${gig.getQuality()}"></td>
+                </tr>
+            </th:block>
         </table>
     </div>
 </body>
