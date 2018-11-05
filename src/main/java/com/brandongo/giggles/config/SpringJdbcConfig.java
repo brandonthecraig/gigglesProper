@@ -1,4 +1,4 @@
-package config;
+package com.brandongo.giggles.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,6 +11,8 @@ import javax.sql.DataSource;
 @ComponentScan("com.brandongo")
 public class SpringJdbcConfig {
     @Bean
+
+    // Something to do with settings for datasource. You'd think this could come from our applications properties
     public DataSource mysqlDatasource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");

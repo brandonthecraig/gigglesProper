@@ -3,41 +3,48 @@ package com.brandongo.giggles.data.entity;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import lombok.Data;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 public class Gig {
 
     @SerializedName("showName:")
     @Expose
-    private String showName;
+    private String Gig_showName;
     @SerializedName("contactName:")
     @Expose
-    private String contactName;
+    private String Gig_contactName;
     @SerializedName("quality")
     @Expose
-    private Integer quality;
+    private Integer Gig_quality;
 
     public String getShowName() {
-        return showName;
+        return Gig_showName;
     }
 
     public void setShowName(String showName) {
-        this.showName = showName;
+        this.Gig_showName = showName;
     }
 
     public String getContactName() {
-        return contactName;
+        return Gig_contactName;
     }
 
     public void setContactName(String contactName) {
-        this.contactName = contactName;
+        this.Gig_contactName = contactName;
     }
 
     public Integer getQuality() {
-        return quality;
+        return Gig_quality;
     }
 
     public void setQuality(Integer quality) {
-        this.quality = quality;
+        this.Gig_quality = quality;
     }
 
 }

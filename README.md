@@ -34,7 +34,8 @@ round 2 stuff
 - add different user accounts?
 
 doing now top, already done underneath
-- link from homepage, css table
+- be able to add something to database
+- tied it into database with jdbc
 - display multiple objects to a table from a json file
 - display the object from a json file to the page
 - make an object from a json file

@@ -8,6 +8,9 @@ public class GigList {
 
     @SerializedName("Gig")
     @Expose
+
+    // Don't know if this is doing anything atm, I'm just making lists of objects on my own.
+    // Would only really need this if I wanted to add functionality to it
     private List<Gig> gig = null;
 
     public List<Gig> getGig() {
