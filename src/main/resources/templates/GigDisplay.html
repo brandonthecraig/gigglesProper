@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -30,13 +31,17 @@
         </table>
     </div>
     <div id = "add_form">
-        <form>
+        <!-- The problem was this was the action section. Something to do with not using the hashtag to go back to the
+        page? Only thing that really got changed so pretty sture that's it-->
+        <form method="POST" action = "#" modelAttribute="gig">
             Show Name <br>
-            <input type = "text", name="showName"> <br>
+            <!-- probs something to do with names, it's creating the model but not doing anything with it -->
+            <!-- maybe a thymeleaf formatting thing -->
+            <input type = "text", name = "Gig_showName"> <br>
             Contact Name <br>
-            <input type = "text", name = "contactName"> <br>
+            <input type = "text", name = "Gig_contactName"> <br>
             Quality <br>
-            <input type="number", name="quality"> <br>
+            <input type="number", name="Gig_quality"> <br>
             <input type = "submit" value = "Submit">
         </form>
     </div>

@@ -11,6 +11,7 @@ import org.springframework.data.annotation.Id;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+@Data
 public class Gig {
 
     @SerializedName("showName:")

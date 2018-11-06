@@ -35,6 +35,10 @@ round 2 stuff
 
 doing now top, already done underneath
 - be able to add something to database
+    - make the form fit the table just for funsies
+    - adds form result to database
+    - save results to my project
+    - added a form to my html
 - tied it into database with jdbc
 - display multiple objects to a table from a json file
 - display the object from a json file to the page
