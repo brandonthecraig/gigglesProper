@@ -8,11 +8,9 @@ import com.brandongo.giggles.repository.mapper.GigMapper;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -71,7 +69,7 @@ public class GiglistController {
         // function that I need is in the gigmapper class
 
         // Adds the new gig from the form into the database
-        jdbcTemplate.update("INSERT INTO GIGDATA VALUES(?, ?, ?)", gig.getGig_showName(), gig.getGig_contactName(),
+        jdbcTemplate.update("INSERT INTO GIGDATA VALUES(?, ?, ?, ?)",gig.getGig_id(), gig.getGig_showName(), gig.getGig_contactName(),
                 gig.getGig_quality());
 
         // returns a list of gigs from the database

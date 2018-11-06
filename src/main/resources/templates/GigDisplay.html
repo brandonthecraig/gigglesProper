@@ -18,18 +18,23 @@
         <form method="POST" action = "#" modelAttribute="gig">
         <table>
             <tr>
+                <th>Gig Id</th>
                 <th>Show Name</th>
                 <th>Contact Name</th>
                 <th>Quality</th>
             </tr>
             <th:block th:each="gig: ${gigs}">
                 <tr>
+                    <td th:text = "${gig.getGig_id()}"</td>
                     <td th:text = "${gig.getShowName()}"></td>
                     <td th:text = "${gig.getContactName()}"></td>
                     <td th:text = "${gig.getQuality()}"></td>
                 </tr>
             </th:block>
             <tr>
+                <td>
+                    <input type = "text", name = "Gig_id"> <br>
+                </td>
                 <td>
                     <input type = "text", name = "Gig_showName"> <br>
                 </td>

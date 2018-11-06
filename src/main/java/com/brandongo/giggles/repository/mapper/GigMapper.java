@@ -27,6 +27,7 @@ public class GigMapper implements RowMapper<Gig> {
         List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
         for (Map row : rows) {
             Gig gig = new Gig ();
+            gig.setGig_id((int)(row.get("Gig_id")));
             gig.setQuality((int)(row.get("Gig_quality")));
             gig.setShowName((String)(row.get("Gig_showName")));
             gig.setContactName((String)(row.get("Gig_contactName")));

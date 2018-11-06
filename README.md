@@ -3,7 +3,8 @@ gigglesProper
 
 what I want to learn
 -how controllers work
--get, put, post
+- Restful web service
+    -get, put, post, delete
 -json stuff? done!!!!
 -gitkraken practice
 -go from objects to html? done!!!!
@@ -29,11 +30,17 @@ things to implement
 
 
 round 2 stuff
-- make it sql based
-- json for display from sql?
 - add different user accounts?
 
+current plan
+- need to delete stuff
+- put a button next to each of the items on the table that sends a delete request
+- get the data from the table somehow? use that to id what to take out of the database
+- buttons so going to need clicky bits into my html (event logger?)
+
+
 doing now top, already done underneath
+- add a delete function
 - be able to add something to database
     - make the form fit the table just for funsies
     - adds form result to database

@@ -23,6 +23,9 @@ public class Gig {
     @SerializedName("quality")
     @Expose
     private Integer Gig_quality;
+    @Expose
+    private Integer Gig_id;
+
 
     public String getShowName() {
         return Gig_showName;
@@ -48,4 +51,11 @@ public class Gig {
         this.Gig_quality = quality;
     }
 
+    public Integer getGig_id() {
+        return Gig_id;
+    }
+
+    public void setGig_id(Integer gig_id) {
+        Gig_id = gig_id;
+    }
 }
