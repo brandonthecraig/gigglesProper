@@ -41,6 +41,8 @@ current plan
 
 doing now top, already done underneath
 - add a delete function
+    -add buttons to id rows.
+    -added ids to my database
 - be able to add something to database
     - make the form fit the table just for funsies
     - adds form result to database

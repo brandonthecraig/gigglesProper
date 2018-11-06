@@ -7,6 +7,7 @@
     <link rel='stylesheet' type="text/css" th:href="@{/assets/css/style.css}"/>
 </head>
 <body>
+
     <div id ="banner">
         <h1>
             Gig Details
@@ -29,6 +30,9 @@
                     <td th:text = "${gig.getShowName()}"></td>
                     <td th:text = "${gig.getContactName()}"></td>
                     <td th:text = "${gig.getQuality()}"></td>
+                    <td>
+                        <input type ="button" name="DELETE" class="delete" value="DELETE"/>
+                    </td>
                 </tr>
             </th:block>
             <tr>

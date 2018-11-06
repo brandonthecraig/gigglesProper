@@ -64,9 +64,6 @@ public class GiglistController {
 
     @PostMapping(path = "/jdbc_display")
     public String jdbcPost(@ModelAttribute("gig") Gig gig, Model model) {
-        System.out.println("this worked");
-        // used to be return 'GigDisplay" like up above
-        // function that I need is in the gigmapper class
 
         // Adds the new gig from the form into the database
         jdbcTemplate.update("INSERT INTO GIGDATA VALUES(?, ?, ?, ?)",gig.getGig_id(), gig.getGig_showName(), gig.getGig_contactName(),
@@ -76,13 +73,12 @@ public class GiglistController {
         GigMapper gigMapper = new GigMapper();
         List<Gig> gigs = gigMapper.findAll(jdbcTemplate);
 
-
         // Plugs in list to html page to be used
         model.addAttribute("gigs", gigs);
         return "GigDisplay";
     }
 
-
+    // need to make buttons that select the entire row. Get that done first
 }
 
 
