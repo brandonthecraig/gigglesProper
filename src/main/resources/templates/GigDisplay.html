@@ -15,6 +15,7 @@
 
 <!-- created table -->
     <div id="one_table">
+        <form method="POST" action = "#" modelAttribute="gig">
         <table>
             <tr>
                 <th>Show Name</th>
@@ -28,22 +29,23 @@
                     <td th:text = "${gig.getQuality()}"></td>
                 </tr>
             </th:block>
+            <tr>
+                <td>
+                    <input type = "text", name = "Gig_showName"> <br>
+                </td>
+                <td>
+                    <input type = "text", name = "Gig_contactName"> <br>
+                </td>
+                <td>
+                    <input type="number", name="Gig_quality"> <br>
+                </td>
+                <td>
+                    <input type = "submit" value = "Submit">
+                </td>
+            </tr>
         </table>
-    </div>
-    <div id = "add_form">
-        <!-- The problem was this was the action section. Something to do with not using the hashtag to go back to the
-        page? Only thing that really got changed so pretty sture that's it-->
-        <form method="POST" action = "#" modelAttribute="gig">
-            Show Name <br>
-            <!-- probs something to do with names, it's creating the model but not doing anything with it -->
-            <!-- maybe a thymeleaf formatting thing -->
-            <input type = "text", name = "Gig_showName"> <br>
-            Contact Name <br>
-            <input type = "text", name = "Gig_contactName"> <br>
-            Quality <br>
-            <input type="number", name="Gig_quality"> <br>
-            <input type = "submit" value = "Submit">
         </form>
     </div>
+
 </body>
 </html>
