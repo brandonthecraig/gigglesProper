@@ -31,13 +31,18 @@
                     <td th:text = "${gig.getContactName()}"></td>
                     <td th:text = "${gig.getQuality()}"></td>
                     <td>
-                        <input type ="button" name="DELETE" class="delete" value="DELETE"/>
+                        <!-- this seems janky because I'm trying to put a delete method inside of a post method? -->
+                        <!-- Last thing I did was add this delete method, need to test it with controller and see
+                        what it will do -->
+                    <a th:href="gig_edit">Edit</a>
                     </td>
                 </tr>
             </th:block>
+            <th:block>
             <tr>
                 <td>
-                    <input type = "text", name = "Gig_id"> <br>
+                    <!-- the test thing is old stuff, delete later -->
+                    <input type = "text", name = "Gig_id" value = "test" th:value ${gigs.get(5).getGig_id()}> <br>
                 </td>
                 <td>
                     <input type = "text", name = "Gig_showName"> <br>
@@ -52,6 +57,7 @@
                     <input type = "submit" value = "Submit">
                 </td>
             </tr>
+            </th:block>
         </table>
         </form>
     </div>

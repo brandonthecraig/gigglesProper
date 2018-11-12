@@ -40,7 +40,7 @@ current plan
 
 
 doing now top, already done underneath
-- add a delete function
+- add an edit function
     -add buttons to id rows.
     -added ids to my database
 - be able to add something to database

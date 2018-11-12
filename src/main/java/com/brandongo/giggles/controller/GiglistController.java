@@ -78,7 +78,20 @@ public class GiglistController {
         return "GigDisplay";
     }
 
-    // need to make buttons that select the entire row. Get that done first
+    @GetMapping(path= "/gig_edit")
+    public String jdbcEdit() {
+        System.out.println("this far");
+
+        return "GigEdit";
+    }
+/**
+     need to make buttons that select the entire row. Get that done first
+     have buttons made, now need to sort out what happens when we click them. It seems like onclicks tend to run off
+     to javascript town. Need a way to either run our jdbc stuff with javascript (effing crazy) or make my onclicks trigger
+    controller things. That feels like a thymeleaf move though, and it's going to be really weird running that stuff through
+     our post method in the form. Is there an ordering for this stuff? Like if I call delete inside the post will it do delete first?
+    First step is to get it to call to a controller element, need some DeleteMapping
+ */
 }
 
 
