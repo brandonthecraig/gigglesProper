@@ -37,13 +37,14 @@ public class GigMapper implements RowMapper<Gig> {
         return gigs;
     }
 
-
-    // this is leftover from my RowMapper implementation. I think in an ideal world there's a way to use this
-    // that doesn't involve me having to write all that stuff up top but I don't want to mess with it atm.
-    @Override
-    public Gig mapRow(ResultSet resultSet, int i) throws SQLException {
-        return null;
+    public Gig mapRow(ResultSet rs, int id) throws SQLException {
+        Gig gig = new Gig();
+        gig.setShowName(rs.getString("Gig_showName"));
+        gig.setContactName(rs.getString("Gig_contactName"));
+        gig.setQuality(rs.getInt("Gig_quality"));
+        return gig;
     }
+
 }
 
 

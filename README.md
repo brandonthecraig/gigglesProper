@@ -37,10 +37,22 @@ current plan
 - put a button next to each of the items on the table that sends a delete request
 - get the data from the table somehow? use that to id what to take out of the database
 - buttons so going to need clicky bits into my html (event logger?)
+- need to abstract all my stuff. Take things out of the controller, add a service layer (doing things to the data, filtering? Like picking one id?) 
+and a repository layer (getting data from database, Strings and gets and stuff)
+- sort out a repository and entity thing, use the boilerplate part of spring to make this all cleaner and easier
+- do this next, restructure program
+- figure out swagger, get that mofo working on here
 
 
 doing now top, already done underneath
 - add an edit function
+    -buttons now point to a new html page that displays the bits of data that are going to be edited
+        - I'm putting an extra post b/c this was a huge step
+        - made a new part of my mapper to get individual rows
+        - made repository and service layer and split up my functions that way
+        - passed a number from my button into the url then passed that into my controller to get the right id
+        - this was a lot, good job you :D
+    -get buttons to point to a new html page for editing
     -add buttons to id rows.
     -added ids to my database
 - be able to add something to database

@@ -5,6 +5,7 @@ package com.brandongo.giggles.controller;
 import com.brandongo.giggles.data.entity.Gig;
 import com.brandongo.giggles.data.entity.GigList;
 import com.brandongo.giggles.repository.mapper.GigMapper;
+import com.brandongo.giggles.service.GigListService;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,7 +62,6 @@ public class GiglistController {
 
     }
 
-
     @PostMapping(path = "/jdbc_display")
     public String jdbcPost(@ModelAttribute("gig") Gig gig, Model model) {
 
@@ -78,20 +78,12 @@ public class GiglistController {
         return "GigDisplay";
     }
 
-    @GetMapping(path= "/gig_edit")
-    public String jdbcEdit() {
-        System.out.println("this far");
-
+    @GetMapping(path= "/gig_edit/{id}")
+    public String jdbcEdit(@PathVariable("id") int id, Model model) {
+        Gig editGig = GigListService.getSingleGig(id, jdbcTemplate);
+        model.addAttribute("gig", editGig);
         return "GigEdit";
     }
-/**
-     need to make buttons that select the entire row. Get that done first
-     have buttons made, now need to sort out what happens when we click them. It seems like onclicks tend to run off
-     to javascript town. Need a way to either run our jdbc stuff with javascript (effing crazy) or make my onclicks trigger
-    controller things. That feels like a thymeleaf move though, and it's going to be really weird running that stuff through
-     our post method in the form. Is there an ordering for this stuff? Like if I call delete inside the post will it do delete first?
-    First step is to get it to call to a controller element, need some DeleteMapping
- */
 }
 
 

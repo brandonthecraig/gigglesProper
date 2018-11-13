@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Edit Page</title>
 </head>
 <body>
-    <h1> Hello World</h1>
+<div class="container text-center buffer-top-bottom">
+    <h1> Edit Gig Deets </h1>
+</div>
+<form method = "put" id ="newEditGig" action = "/AddControllerPathHere" ><!-- need a new controller for this page?-->
+    <h4>Show Name</h4>
+    <input type="text" id = "Show Name" size = "100" th:placeholder ="${gig.getShowName()}" value>
+    <h4>Contact Name</h4>
+    <input type="text" id = "Contact Name" size = "100" th:placeholder ="${gig.getContactName()}" value>
+    <h4>Quality</h4>
+    <input type="text" id = "Quality" size = "100" th:placeholder ="${gig.getQuality()}" value>
+</form>
+
 </body>
+
 </html>
