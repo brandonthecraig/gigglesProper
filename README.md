@@ -43,6 +43,7 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 - do this next, restructure program
 - figure out swagger, get that mofo working on here
 - change all my references to controller from html to use the format of my post request on the edit page
+- make sure that you can post after running the edit thing 
 
 
 doing now top, already done underneath

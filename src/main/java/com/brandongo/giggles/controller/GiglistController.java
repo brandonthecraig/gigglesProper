@@ -4,8 +4,6 @@ package com.brandongo.giggles.controller;
 
 import com.brandongo.giggles.data.entity.Gig;
 import com.brandongo.giggles.data.entity.GigList;
-import com.brandongo.giggles.repository.mapper.GigMapper;
-import com.brandongo.giggles.repository.mapper.GigRepository;
 import com.brandongo.giggles.service.GigListService;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -83,6 +81,9 @@ public class GiglistController {
     // Going offline on this, next step is to make your post mapping for the form
     @PostMapping(path= "/update_test")
     public String jdbcEditUpdate(@ModelAttribute("updatedGig") Gig gig, Model model) {
+
+        GigListService.updateSingleGig(jdbcTemplate, gig);
+
         // update the specific thing you're updating
         // return a model for GigDisplay to use
         // add a seperate step for an update page
