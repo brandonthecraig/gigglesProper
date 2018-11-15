@@ -3,6 +3,12 @@ body {
     background-color: gray;
 }
 
+#edit_form{
+    /*something weird going on here with thymeleaf try and figure out later*/
+    text-align: center;
+    color: black;
+}
+
 #banner{
     text-align: center;
     font-weight: bold;

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Page</title>
+    <link rel='stylesheet' type="text/css" th:href="@{/assets/css/style.css}"/>
 </head>
 <body>
-<div class="container text-center buffer-top-bottom">
+<div id = "banner">
     <h1> Edit Gig Deets </h1>
 </div>
+<div id = "edit_form">
 <form method = "POST" id ="newEditGig" th:action = "@{/gig_display/update_test}" modelAttribute ="updatedGig">
     <input type="text" name = "Gig_id" id = "Gig Id" size = "100" th:value="${gig.getGigId()}" value style="display: none">
     <h4>Show Name</h4>
@@ -20,6 +22,7 @@
         <input type = "submit" value = "Submit">
     </h4>
 </form>
+</div>
 
 </body>
 

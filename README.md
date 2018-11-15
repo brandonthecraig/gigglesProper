@@ -48,6 +48,7 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 doing now top, already done underneath
 - add an edit function
     - do a put request from GigEdit page
+    - tied in edit page to css stuff so it looks all pretty
     -buttons now point to a new html page that displays the bits of data that are going to be edited
         - I'm putting an extra post b/c this was a huge step (basically all the get stuff for an edit page)
         - made a new part of my mapper to get individual rows
