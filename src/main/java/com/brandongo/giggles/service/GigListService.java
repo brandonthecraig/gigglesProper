@@ -16,4 +16,8 @@ public class GigListService {
     public static List<Gig> getAllGigs(JdbcTemplate jdbcTemplate) {
         return GigRepository.getAllGigs(jdbcTemplate);
     }
+
+    public static void insertSingleGig(JdbcTemplate jdbcTemplate, Gig gig) {
+        GigRepository.insertSingleGig(jdbcTemplate, gig);
+    }
 }

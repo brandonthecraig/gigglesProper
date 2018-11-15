@@ -14,6 +14,7 @@ public class GigRepository {
 
     private final static String SINGLE_GIG_QUERY = "SELECT * FROM GIGDATA WHERE Gig_id= ?";
     private final static String ALL_GIG_QUERY = "SELECT * FROM GIGDATA";
+    private final static String INSERT_SINGLE_GIG = "INSERT INTO GIGDATA VALUES(?, ?, ?, ?)";
 
 
 
@@ -26,6 +27,11 @@ public class GigRepository {
 
         List<Gig> gigs = jdbcTemplate.query(ALL_GIG_QUERY, new BeanPropertyRowMapper(Gig.class));
         return gigs;
+    }
+
+    public static void insertSingleGig(JdbcTemplate jdbcTemplate, Gig gig) {
+        jdbcTemplate.update(INSERT_SINGLE_GIG, gig.getGigId(), gig.getGig_showName(), gig.getGig_contactName(),
+                gig.getGig_quality());
     }
 
 }

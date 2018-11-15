@@ -63,8 +63,7 @@ public class GiglistController {
     public String jdbcPost(@ModelAttribute("gig") Gig gig, Model model) {
 
         // Adds the new gig from the form into the database
-        jdbcTemplate.update("INSERT INTO GIGDATA VALUES(?, ?, ?, ?)",gig.getGigId(), gig.getGig_showName(), gig.getGig_contactName(),
-                gig.getGig_quality());
+        GigListService.insertSingleGig(jdbcTemplate, gig);
 
         // returns a list of gigs from the database
         List<Gig> gigs = GigListService.getAllGigs(jdbcTemplate);

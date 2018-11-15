@@ -49,6 +49,7 @@ doing now top, already done underneath
 - add an edit function
     - do a put request from GigEdit page
     - Adding abstraction to program, cleaning up the structure for my findAll requests as I need it for my edit page
+        - moved the findAll from mapper class to repository
     - tied in edit page to css stuff so it looks all pretty
     -buttons now point to a new html page that displays the bits of data that are going to be edited
         - I'm putting an extra post b/c this was a huge step (basically all the get stuff for an edit page)
