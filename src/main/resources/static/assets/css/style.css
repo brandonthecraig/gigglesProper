@@ -4,7 +4,7 @@ body {
 }
 
 #edit_form{
-    /*something weird going on here with thymeleaf try and figure out later*/
+    /*something weird going on here with thymeleaf try and figure out later. go looking in email toolkit at how they do there*/
     text-align: center;
     color: black;
 }
