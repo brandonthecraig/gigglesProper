@@ -51,7 +51,8 @@ public class Gig {
         this.Gig_quality = quality;
     }
 
-    public Integer getGig_id() {
+    public Integer
+    getGigId() {
         return Gig_id;
     }
 

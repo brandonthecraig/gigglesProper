@@ -26,28 +26,28 @@
             </tr>
             <th:block th:each="gig: ${gigs}">
                 <tr>
-                    <td th:text = "${gig.getGig_id()}"</td>
+                    <td th:text = "${gig.getGigId()}"></td>
                     <td th:text = "${gig.getShowName()}"></td>
                     <td th:text = "${gig.getContactName()}"></td>
                     <td th:text = "${gig.getQuality()}"></td>
                     <td>
-                    <a th:href="'gig_edit/' + ${gig.getGig_id()}">Edit</a>
+                    <a th:href="'gig_edit/' + ${gig.getGigId()}">Edit</a>
                     </td>
                 </tr>
             </th:block>
             <th:block>
             <tr>
                 <td>
-                    <input type = "text", name = "Gig_id"> <br>
+                    <input type = "text" name = "Gig_id"> <br>
                 </td>
                 <td>
-                    <input type = "text", name = "Gig_showName"> <br>
+                    <input type = "text" name = "Gig_showName"> <br>
                 </td>
                 <td>
-                    <input type = "text", name = "Gig_contactName"> <br>
+                    <input type = "text" name = "Gig_contactName"> <br>
                 </td>
                 <td>
-                    <input type="number", name="Gig_quality"> <br>
+                    <input type="number" name="Gig_quality"> <br>
                 </td>
                 <td>
                     <input type = "submit" value = "Submit">

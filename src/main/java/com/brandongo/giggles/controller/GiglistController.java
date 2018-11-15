@@ -66,7 +66,7 @@ public class GiglistController {
     public String jdbcPost(@ModelAttribute("gig") Gig gig, Model model) {
 
         // Adds the new gig from the form into the database
-        jdbcTemplate.update("INSERT INTO GIGDATA VALUES(?, ?, ?, ?)",gig.getGig_id(), gig.getGig_showName(), gig.getGig_contactName(),
+        jdbcTemplate.update("INSERT INTO GIGDATA VALUES(?, ?, ?, ?)",gig.getGigId(), gig.getGig_showName(), gig.getGig_contactName(),
                 gig.getGig_quality());
 
         // returns a list of gigs from the database
@@ -79,11 +79,29 @@ public class GiglistController {
     }
 
     @GetMapping(path= "/gig_edit/{id}")
-    public String jdbcEdit(@PathVariable("id") int id, Model model) {
+    public String jdbcEditDisplay(@PathVariable("id") int id, Model model) {
         Gig editGig = GigListService.getSingleGig(id, jdbcTemplate);
         model.addAttribute("gig", editGig);
         return "GigEdit";
     }
+
+    // Going offline on this, next step is to make your post mapping for the form
+    @PostMapping(path= "/update_test")
+    public String jdbcEditUpdate(@ModelAttribute("updatedGig") Gig gig, Model model) {
+        // update the specific thing you're updating
+        // return a model for GigDisplay to use
+        // add a seperate step for an update page
+        // returns a list of gigs from the database
+        // something is really off, it's telling me that these responses aren't allowed. Might be a good time to do backend,
+        // try it in postman and then figure out what's up from there
+        GigMapper gigMapper = new GigMapper();
+        List<Gig> gigs = gigMapper.findAll(jdbcTemplate);
+
+        // Plugs in list to html page to be used
+        model.addAttribute("gigs", gigs);
+        return "GigDisplay";
+    }
+
 }
 
 

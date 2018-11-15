@@ -39,6 +39,7 @@ public class GigMapper implements RowMapper<Gig> {
 
     public Gig mapRow(ResultSet rs, int id) throws SQLException {
         Gig gig = new Gig();
+        gig.setGig_id(rs.getInt("Gig_id"));
         gig.setShowName(rs.getString("Gig_showName"));
         gig.setContactName(rs.getString("Gig_contactName"));
         gig.setQuality(rs.getInt("Gig_quality"));

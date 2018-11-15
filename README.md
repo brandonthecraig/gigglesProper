@@ -42,12 +42,14 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 - sort out a repository and entity thing, use the boilerplate part of spring to make this all cleaner and easier
 - do this next, restructure program
 - figure out swagger, get that mofo working on here
+- change all my references to controller from html to use the format of my post request on the edit page
 
 
 doing now top, already done underneath
 - add an edit function
+    - do a put request from GigEdit page
     -buttons now point to a new html page that displays the bits of data that are going to be edited
-        - I'm putting an extra post b/c this was a huge step
+        - I'm putting an extra post b/c this was a huge step (basically all the get stuff for an edit page)
         - made a new part of my mapper to get individual rows
         - made repository and service layer and split up my functions that way
         - passed a number from my button into the url then passed that into my controller to get the right id
