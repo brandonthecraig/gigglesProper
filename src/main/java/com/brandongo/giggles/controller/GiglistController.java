@@ -80,21 +80,19 @@ public class GiglistController {
 
     // Going offline on this, next step is to make your post mapping for the form
     @PostMapping(path= "/update_test")
-    public String jdbcEditUpdate(@ModelAttribute("updatedGig") Gig gig, Model model) {
-
+    public String jdbcEditUpdate(@ModelAttribute("updatedGigToDB") Gig gig, Model model) {
+        // does the update
         GigListService.updateSingleGig(jdbcTemplate, gig);
+        return "redirect:/gig_display/jdbc_display";
+    }
 
-        // update the specific thing you're updating
-        // return a model for GigDisplay to use
-        // add a seperate step for an update page
-        // returns a list of gigs from the database
-        // something is really off, it's telling me that these responses aren't allowed. Might be a good time to do backend,
-        // try it in postman and then figure out what's up from there
-        List<Gig> gigs = GigListService.getAllGigs(jdbcTemplate);
+    @GetMapping(path = "/confirmEdit")
+    public String jdbcEditConfirm(@ModelAttribute("updatedGig") Gig gig, Model model) {
+        Gig oldGig = GigListService.getSingleGig(gig.getGig_id(), jdbcTemplate);
 
-        // Plugs in list to html page to be used
-        model.addAttribute("gigs", gigs);
-        return "GigDisplay";
+        model.addAttribute("oldGig", oldGig);
+        model.addAttribute("updatedGig", gig);
+        return "EditConfirmation";
     }
 
 }

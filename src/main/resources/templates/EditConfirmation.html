@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type="text/css" th:href="@{/assets/css/style.css}"/>
+    <!--<link rel='stylesheet' type="text/css" th:href="@{/css/style.css}"/>-->
+    <!--this up here is how I get thymeleaf to grab my css. it currently makes everything disgusting-->
+    <title>Edit Confirmation</title>
+</head>
+<body>
+<div id="banner">
+    <h1>
+        Edit Confirmation
+    </h1>
+</div>
+<div id="one_table">
+
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Old Info</th>
+                <th>Updated Info</th>
+            </tr>
+            <tr>
+                <td>Show Name</td>
+                <td th:text="${oldGig.getShowName()}"></td>
+                <td th:text="${updatedGig.getShowName()}" th:name="Gig_showName"></td>
+            </tr>
+            <tr>
+                <td>Contact Name</td>
+                <td th:text="${oldGig.getContactName()}"></td>
+                <td th:text="${updatedGig.getContactName()}" th:name="Gig_contactName"></td>
+            </tr>
+            <tr>
+                <td>Quality</td>
+                <td th:text="${oldGig.getQuality()}"></td>
+                <td th:text="${updatedGig.getQuality()}" th:name="Gig_quality"></td>
+            </tr>
+        </table>
+
+</div>
+<div id = "edit_form">
+    <h4>
+        Are you sure you want to make these changes?
+    </h4>
+<form method="POST" th:action="@{/gig_display/update_test}" modelAttribute="updatedGigToDB">
+    <input type="text" name="Gig_id" id="Gig Id" size="100" th:value="${updatedGig.getGigId()}" value
+           style="display: none">
+    <input type="text" name="Gig_showName" id="Gig ShowName" size="100" th:value="${updatedGig.getGig_showName()}" value
+           style="display: none">
+    <input type="text" name="Gig_contactName" id="Gig ContactName" size="100" th:value="${updatedGig.getContactName()}" value
+           style="display: none">
+    <input type="text" name="Gig_quality" id="Gig Quality" size="100" th:value="${updatedGig.getQuality()}" value
+           style="display: none">
+    <button>Yup!</button>
+</form>
+<form method="GET" th:action="@{/gig_display/jdbc_display}">
+    <button>Nope!</button>
+</form>
+</div>
+</body>
+</html>

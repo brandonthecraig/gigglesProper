@@ -10,7 +10,7 @@
     <h1> Edit Gig Deets </h1>
 </div>
 <div id = "edit_form">
-<form method = "POST" id ="newEditGig" th:action = "@{/gig_display/update_test}" modelAttribute ="updatedGig">
+<form method = "GET" id ="newEditGig" th:action = "@{/gig_display/confirmEdit}" modelAttribute ="updatedGig">
     <input type="text" name = "Gig_id" id = "Gig Id" size = "100" th:value="${gig.getGigId()}" value style="display: none">
     <h4>Show Name</h4>
     <input type="text" name = "Gig_showName" id = "Show Name" size = "100" th:value ="${gig.getShowName()}" value>

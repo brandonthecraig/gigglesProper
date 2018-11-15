@@ -7,6 +7,11 @@ body {
     /*something weird going on here with thymeleaf try and figure out later. go looking in email toolkit at how they do there*/
     text-align: center;
     color: black;
+    table-border-color-dark: black;
+    size: 40px;
+    border: 1px solid black;
+    width:100%;
+    height: 100%;
 }
 
 #banner{

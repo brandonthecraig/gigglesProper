@@ -48,7 +48,11 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 
 doing now top, already done underneath
 - add an edit function
-    - do a put request from GigEdit page
+    -changed output of postpage so it redirects to the main display page rather than creating it's own url. Job complete!
+    - adding a confirmation page so people can confirm before they make changes
+        - cancel button links back to the main display page
+        - ok button posts to database and goes to seperate page, need to change it so it redirects to the display page
+    - do a post request from GigEdit page
     - Adding abstraction to program, cleaning up the structure for my findAll requests as I need it for my edit page
         - moved the findAll from mapper class to repository
     - tied in edit page to css stuff so it looks all pretty
