@@ -79,8 +79,8 @@ public class GiglistController {
     }
 
     // Going offline on this, next step is to make your post mapping for the form
-    @PostMapping(path= "/update_test")
-    public String jdbcEditUpdate(@ModelAttribute("updatedGigToDB") Gig gig, Model model) {
+    @PostMapping(path= "/update")
+    public String jdbcEditUpdate(@ModelAttribute("updatedGigToDB") Gig gig) {
         // does the update
         GigListService.updateSingleGig(jdbcTemplate, gig);
         return "redirect:/gig_display/jdbc_display";

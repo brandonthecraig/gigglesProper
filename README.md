@@ -47,6 +47,7 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 
 
 doing now top, already done underneath
+- css day or delete is next
 - add an edit function
     -changed output of postpage so it redirects to the main display page rather than creating it's own url. Job complete!
     - adding a confirmation page so people can confirm before they make changes

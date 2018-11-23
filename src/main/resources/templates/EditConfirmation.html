@@ -43,7 +43,7 @@
     <h4>
         Are you sure you want to make these changes?
     </h4>
-<form method="POST" th:action="@{/gig_display/update_test}" modelAttribute="updatedGigToDB">
+<form method="POST" th:action="@{/gig_display/update}" modelAttribute="updatedGigToDB">
     <input type="text" name="Gig_id" id="Gig Id" size="100" th:value="${updatedGig.getGigId()}" value
            style="display: none">
     <input type="text" name="Gig_showName" id="Gig ShowName" size="100" th:value="${updatedGig.getGig_showName()}" value
