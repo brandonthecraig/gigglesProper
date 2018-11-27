@@ -24,4 +24,8 @@ public class GigListService {
     public static void updateSingleGig(JdbcTemplate jdbcTemplate, Gig gig) {
         GigRepository.updateSingleGig(jdbcTemplate, gig);
     }
+
+    public static void deleteSingleGig(JdbcTemplate jdbcTemplate, Integer gig_id) {
+        GigRepository.deleteSingleGig(jdbcTemplate, gig_id);
+    }
 }

@@ -18,6 +18,7 @@ public class GigRepository {
     private final static String INSERT_SINGLE_GIG = "INSERT INTO GIGDATA VALUES(?, ?, ?, ?)";
     private final static String UPDATE_SINGLE_GIG = "UPDATE GIGDATA SET Gig_showName = ?, Gig_contactName = ?, " +
             "Gig_quality = ? WHERE Gig_id = ?";
+    private final static String DELETE_SINGLE_GIG = "DELETE FROM GIGDATA WHERE Gig_Id = ?";
 
 
 
@@ -40,5 +41,9 @@ public class GigRepository {
     public static void updateSingleGig(JdbcTemplate jdbcTemplate, Gig gig) {
         jdbcTemplate.update(UPDATE_SINGLE_GIG, gig.getGig_showName(), gig.getGig_contactName(), gig.getGig_quality(),
                 gig.getGigId());
+    }
+
+    public static void deleteSingleGig(JdbcTemplate jdbcTemplate, Integer gig_id) {
+        jdbcTemplate.update(DELETE_SINGLE_GIG, gig_id);
     }
 }

@@ -49,7 +49,8 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 doing now top, already done underneath
 - css day or delete is next
 - add a delete function
-    - doing back end to delete the item from my table
+    - add a confirmation button
+    - completed back end logic that takes id number and deletes it from my database
     - got buttons on the table to return a gig model with the id number to my controller
     - added buttons to the table
 - add an edit function

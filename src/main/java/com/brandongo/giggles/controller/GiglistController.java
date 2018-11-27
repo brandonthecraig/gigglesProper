@@ -74,6 +74,9 @@ public class GiglistController {
     @DeleteMapping(path = "/jdbc_display")
     public String jdbcDelete(@ModelAttribute("gig") Gig gig, Model model) {
 
+        // Deletes the gig from the database
+        GigListService.deleteSingleGig(jdbcTemplate, gig.getGig_id());
+
         // returns a list of gigs from the database
         List<Gig> gigs = GigListService.getAllGigs(jdbcTemplate);
 
