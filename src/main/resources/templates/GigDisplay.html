@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Giglist</title>
     <link rel='stylesheet' type="text/css" th:href="@{/assets/css/style.css}"/>
+    <script>
+        function deleteConfirm() {
+        var r = confirm("Are you sure you want to delete this?");
+        return r;
+    }
+    </script>
 </head>
 <body>
 
@@ -15,7 +21,7 @@
 
 <!-- created table -->
 <div id="one_table">
-    <form method="POST" action="#" modelAttribute="gig">
+
         <table>
             <tr>
                 <th>Gig Id</th>
@@ -23,6 +29,7 @@
                 <th>Contact Name</th>
                 <th>Quality</th>
             </tr>
+            <form th:method = "DELETE" action ="#" modelAttribute = "gig">
             <th:block th:each="gig: ${gigs}">
                 <tr>
                     <td th:text="${gig.getGigId()}"></td>
@@ -32,8 +39,14 @@
                     <td>
                         <a th:href="'gig_edit/' + ${gig.getGigId()}">Edit</a>
                     </td>
+                    <td>
+                        <button name = "Gig_id" type="submit" th:value ="${gig.getGig_id()}">Delete</button>
+                        <!--<input type = "submit" name = "Delete" th:value="${gig.getGig_id()}">-->
+                    </td>
                 </tr>
             </th:block>
+            </form>
+            <form method="POST" action="#" modelAttribute="gig">
             <th:block>
                 <tr>
                     <td>

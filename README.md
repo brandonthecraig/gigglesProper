@@ -48,6 +48,10 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 
 doing now top, already done underneath
 - css day or delete is next
+- add a delete function
+    - doing back end to delete the item from my table
+    - got buttons on the table to return a gig model with the id number to my controller
+    - added buttons to the table
 - add an edit function
     -changed output of postpage so it redirects to the main display page rather than creating it's own url. Job complete!
     - adding a confirmation page so people can confirm before they make changes

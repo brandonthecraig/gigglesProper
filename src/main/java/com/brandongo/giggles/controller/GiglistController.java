@@ -71,6 +71,17 @@ public class GiglistController {
         return "GigDisplay";
     }
 
+    @DeleteMapping(path = "/jdbc_display")
+    public String jdbcDelete(@ModelAttribute("gig") Gig gig, Model model) {
+
+        // returns a list of gigs from the database
+        List<Gig> gigs = GigListService.getAllGigs(jdbcTemplate);
+
+        // Plugs in list to html page to be used
+        model.addAttribute("gigs", gigs);
+        return "GigDisplay";
+    }
+
     @GetMapping(path= "/gig_edit/{id}")
     public String jdbcEditDisplay(@PathVariable("id") int id, Model model) {
         Gig editGig = GigListService.getSingleGig(id, jdbcTemplate);
