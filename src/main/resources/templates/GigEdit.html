@@ -9,7 +9,7 @@
 <div id = "banner">
     <h1> Edit Gig Deets </h1>
 </div>
-<div id = "edit_form">
+<div id = "one_table">
 <form method = "GET" id ="newEditGig" th:action = "@{/gig_display/confirmEdit}" modelAttribute ="updatedGig">
     <input type="text" name = "Gig_id" id = "Gig Id" size = "100" th:value="${gig.getGigId()}" value style="display: none">
     <h4>Show Name</h4>

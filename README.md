@@ -4,11 +4,11 @@ gigglesProper
 what I want to learn
 -how controllers work
 - Restful web service
-    -get, put, post, delete
+    -get, put, post, delete   done!!!!
 -json stuff? done!!!!
--gitkraken practice
+-gitkraken practice  done!!!!
 -go from objects to html? done!!!!
--thymeleaf
+-thymeleaf   done!!!!
 -all the werid spring boot annotations - override, controller, service, autowired, entity, table, column, id, repository
        requestmapping, 
 - how to display from a java object to a webpage, gonna used thymeleaf like a pro !!!!!
@@ -31,23 +31,16 @@ things to implement
 
 round 2 stuff
 - add different user accounts?
-
-current plan
-- need to delete stuff
-- put a button next to each of the items on the table that sends a delete request
-- get the data from the table somehow? use that to id what to take out of the database
-- buttons so going to need clicky bits into my html (event logger?)
-- need to abstract all my stuff. Take things out of the controller, add a service layer (doing things to the data, filtering? Like picking one id?) 
-and a repository layer (getting data from database, Strings and gets and stuff)
-- sort out a repository and entity thing, use the boilerplate part of spring to make this all cleaner and easier
-- do this next, restructure program
-- figure out swagger, get that mofo working on here
-- change all my references to controller from html to use the format of my post request on the edit page
-- make sure that you can post after running the edit thing 
+- make it email for me, going to need email info from db, along with contact sched and last contacted date
 
 
 doing now top, already done underneath
 - css day
+    - put all my tables under 1 css tag
+    -changed color scheme and added flexbox to my table
+    -tried changing a bunch of stuff and realized that my page is not reflecting my updates css
+        - it's got something to do with the static resources and it looks like I need to build a webconfig to actually make changes
+        - nm, did some more googling and it turns out that there was a property I needed to set that keeps my page from storing chaches
 - add a delete function
     - add a confirmation button
     - completed back end logic that takes id number and deletes it from my database

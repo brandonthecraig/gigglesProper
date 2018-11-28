@@ -1,34 +1,31 @@
 body {
-    color: aliceblue;
-    background-color: gray;
-}
-
-#edit_form{
-    /*something weird going on here with thymeleaf try and figure out later. go looking in email toolkit at how they do there*/
+    color: #a9FFF7;
+    background-color: #93b7be;
     text-align: center;
-    color: black;
-    table-border-color-dark: black;
-    size: 40px;
-    border: 1px solid black;
-    width:100%;
-    height: 100%;
 }
 
 #banner{
+    color: #b8e1ff;
+    background-color: #93b7be;
     text-align: center;
     font-weight: bold;
     padding: 10px;
-    border: 2px solid #403925;
-    border-radius: 5px;
+    /*border: 2px solid #403925;*/
+    /*border-radius: 5px;*/
 }
 
 #one_table{
-    table-border-color-dark: black;
-    text-align: center;
-    size: 40px;
-    color: papayawhip;
-    border: 1px solid black;
-    width:100%;
-    height: 100%;
 
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    text-align: center;
+
+    box-sizing: padding-box;
+    /*padding: 20px;*/
+    border: 1px solid black;
+
+    size: 40px;
+    color: #a9FFF7;
+    height: 100%;
 }

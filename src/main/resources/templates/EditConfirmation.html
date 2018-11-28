@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <!--<link rel='stylesheet' type="text/css" th:href="@{/assets/css/style.css}"/>-->
     <link rel='stylesheet' type="text/css" th:href="@{/assets/css/style.css}"/>
-    <!--<link rel='stylesheet' type="text/css" th:href="@{/css/style.css}"/>-->
     <!--this up here is how I get thymeleaf to grab my css. it currently makes everything disgusting-->
     <title>Edit Confirmation</title>
 </head>
@@ -39,7 +39,6 @@
         </table>
 
 </div>
-<div id = "edit_form">
     <h4>
         Are you sure you want to make these changes?
     </h4>
@@ -57,6 +56,5 @@
 <form method="GET" th:action="@{/gig_display/jdbc_display}">
     <button>Nope!</button>
 </form>
-</div>
 </body>
 </html>
