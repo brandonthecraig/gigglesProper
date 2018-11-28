@@ -47,7 +47,7 @@ and a repository layer (getting data from database, Strings and gets and stuff)
 
 
 doing now top, already done underneath
-- css day or delete is next
+- css day
 - add a delete function
     - add a confirmation button
     - completed back end logic that takes id number and deletes it from my database
