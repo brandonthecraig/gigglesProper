@@ -32,9 +32,21 @@ things to implement
 round 2 stuff
 - add different user accounts?
 - make it email for me, going to need email info from db, along with contact sched and last contacted date
+- non functional checks
+    - add some logic to do some preventions
+    - put a cap on db structure and a catch in the logic so it doesn't get that far
+    - put in safeties against ppl running queries from the form
+    - same for javascript
+    - auto gig id placement as all of that comes from there
+    - error messages for this?
+    - what level does this all go in?
 
 
 doing now top, already done underneath
+- non-functional programming and bug fixes
+    - limiting input form length to the size of my fields in my db
+    - changed default value in my db for id and quality to be -1 as if I get a null it messes with my java logic
+- congrats! rest controller is functional, good job :)
 - css day
     - put all my tables under 1 css tag
     -changed color scheme and added flexbox to my table
@@ -42,7 +54,7 @@ doing now top, already done underneath
         - it's got something to do with the static resources and it looks like I need to build a webconfig to actually make changes
         - nm, did some more googling and it turns out that there was a property I needed to set that keeps my page from storing chaches
 - add a delete function
-    - add a confirmation button
+    - add a confirmation prompt
     - completed back end logic that takes id number and deletes it from my database
     - got buttons on the table to return a gig model with the id number to my controller
     - added buttons to the table

@@ -18,6 +18,9 @@ public class GigListService {
     }
 
     public static void insertSingleGig(JdbcTemplate jdbcTemplate, Gig gig) {
+        if (gig.getGig_id() == null) {
+            gig.setGig_id(-1);
+        }
         GigRepository.insertSingleGig(jdbcTemplate, gig);
     }
 
