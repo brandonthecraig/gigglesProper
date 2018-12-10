@@ -75,7 +75,7 @@ public class GiglistController {
     public String jdbcDelete(@ModelAttribute("gig") Gig gig, Model model) {
 
         // Deletes the gig from the database
-        GigListService.deleteSingleGig(jdbcTemplate, gig.getGig_id());
+        GigListService.deleteSingleGig(jdbcTemplate, gig.getGigId());
 
         // returns a list of gigs from the database
         List<Gig> gigs = GigListService.getAllGigs(jdbcTemplate);
@@ -102,7 +102,7 @@ public class GiglistController {
 
     @GetMapping(path = "/confirmEdit")
     public String jdbcEditConfirm(@ModelAttribute("updatedGig") Gig gig, Model model) {
-        Gig oldGig = GigListService.getSingleGig(gig.getGig_id(), jdbcTemplate);
+        Gig oldGig = GigListService.getSingleGig(gig.getGigId(), jdbcTemplate);
 
         model.addAttribute("oldGig", oldGig);
         model.addAttribute("updatedGig", gig);

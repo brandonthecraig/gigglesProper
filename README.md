@@ -40,11 +40,14 @@ round 2 stuff
     - auto gig id placement as all of that comes from there
     - error messages for this?
     - what level does this all go in?
+    - limit form length 
+    - add default value to id form
 
 
 doing now top, already done underneath
 - non-functional programming and bug fixes
-    - limiting input form length to the size of my fields in my db
+    - prevent user from creating multiple entries with the same id
+        -see how spotify does this with songs and playlists :) 
     - changed default value in my db for id and quality to be -1 as if I get a null it messes with my java logic
 - congrats! rest controller is functional, good job :)
 - css day

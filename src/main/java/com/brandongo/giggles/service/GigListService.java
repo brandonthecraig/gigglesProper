@@ -18,7 +18,7 @@ public class GigListService {
     }
 
     public static void insertSingleGig(JdbcTemplate jdbcTemplate, Gig gig) {
-        if (gig.getGig_id() == null) {
+        if (gig.getGigId() == null) {
             gig.setGig_id(-1);
         }
         GigRepository.insertSingleGig(jdbcTemplate, gig);
@@ -31,4 +31,5 @@ public class GigListService {
     public static void deleteSingleGig(JdbcTemplate jdbcTemplate, Integer gig_id) {
         GigRepository.deleteSingleGig(jdbcTemplate, gig_id);
     }
+
 }
